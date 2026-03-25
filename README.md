@@ -4,14 +4,14 @@
 
 ---
 
-## ⏱️ Setup (under 1 hour)
+
 
 ### STEP 1 — Install Ollama (5 min)
 
 1. Download from **https://ollama.com/download** → install for Windows
 2. Open a terminal and pull the models:
 
-```powershell
+```
 # Reasoning chat model (~4.7 GB)
 ollama pull deepseek-r1:7b
 
@@ -19,15 +19,11 @@ ollama pull deepseek-r1:7b
 ollama pull nomic-embed-text
 ```
 
-> Ollama runs silently in the background after install. No configuration needed.
-
----
-
 ### STEP 2 — Set Up Python Environment (5 min)
 
-```powershell
+```
 # Navigate to this project
-cd C:\Users\faroo\.gemini\antigravity\scratch\local-rag
+cd C:\Users\user\.gemini\antigravity\scratch\local-rag
 
 # Create and activate a virtual environment
 python -m venv .venv
@@ -39,18 +35,16 @@ pip install -r requirements.txt
 
 ---
 
-### STEP 3 — Configure (1 min)
+### STEP 3 — Configure
 
-```powershell
+```
 # Copy the example config
 copy .env.example .env
 ```
 
-Edit `.env` if needed (defaults work out of the box).
-
 ---
 
-### STEP 4 — Add Your Documents (2 min)
+### STEP 4 — Add Your Documents
 
 Drop your files into the **`docs/`** folder:
 
@@ -65,9 +59,9 @@ Subfolders are supported — all files are scanned recursively.
 
 ---
 
-### STEP 5 — Ingest Documents (5–15 min depending on size)
+### STEP 5 — Ingest Documents
 
-```powershell
+```
 python ingest.py
 ```
 
@@ -78,11 +72,9 @@ Run this again whenever you add or update documents.
 
 ### STEP 6 — Start Chatting! 🎉
 
-```powershell
+```
 streamlit run app.py
 ```
-
-Opens in your browser at **http://localhost:8501**
 
 ---
 
